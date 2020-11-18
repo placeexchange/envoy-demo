@@ -1,0 +1,16 @@
+version: "2.1"
+services:
+
+  envoy:
+    build:
+      context: .
+      dockerfile: envoy.dockerfile
+    ports:
+      - "8000:8000"
+
+  app:
+    build:
+      context: .
+      dockerfile: app.dockerfile
+    ports:
+      - "8080:8080"
