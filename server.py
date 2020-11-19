@@ -88,7 +88,7 @@ async def vary(request: Request):
     )
 
 
-@routes.get("/rbac-yes")
+@routes.get("/rbac-read")
 async def rbac_yes(request: Request):
     return web.Response(
         headers={
@@ -98,7 +98,7 @@ async def rbac_yes(request: Request):
     )
 
 
-@routes.get("/rbac-no")
+@routes.get("/rbac-write")
 async def rbac_no(request: Request):
     return web.Response(
         headers={
