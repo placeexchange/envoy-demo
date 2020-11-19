@@ -83,11 +83,11 @@ static_resources:
                                     - key: scope
                                   value:
                                     string_match:
-                                      contains: "${SCOPE}"
+                                      contains: read
                             permissions:
                               - url_path:
                                   path:
-                                    prefix: "/rbac-yes"
+                                    prefix: "/rbac-read"
                           "rbac-no":
                             principals:
                               - metadata:
@@ -97,11 +97,11 @@ static_resources:
                                     - key: scope
                                   value:
                                     string_match:
-                                      contains: unassigned-scope
+                                      contains: write
                             permissions:
                               - url_path:
                                   path:
-                                    prefix: "/rbac-no"
+                                    prefix: "/rbac-write"
                           "otherwise":
                             principals:
                               - any: true
